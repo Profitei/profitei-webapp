@@ -1,3 +1,4 @@
+import { GoogleTagManager } from '@next/third-parties/google';
 import Document, { Head, Html, Main, NextScript } from 'next/document';
 
 import { AppConfig } from '../utils/AppConfig';
@@ -8,36 +9,11 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang={AppConfig.locale}>
-        <Head>
-          <script
-            type="text/javascript"
-            async
-            dangerouslySetInnerHTML={{
-              __html: `
-              (function(w, d, s, l, i) {
-                    w[l] = w[l] || []
-                    w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" })
-                    const f = d.getElementsByTagName(s)[0],
-                      j = d.createElement(s),
-                      dl = l != "dataLayer" ? "&l=" + l : ""
-                    j.async = true
-                    j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl
-                    f.parentNode.insertBefore(j, f)
-                  })(window,document,'script','dataLayer',"G-2QPMPZ3WQ3")`,
-            }}
-          />
-        </Head>
+        <GoogleTagManager gtmId="G-2QPMPZ3WQ3" />
+        <Head />
         <body>
           <Main />
           <NextScript />
-          <noscript>
-            <iframe
-              src={`https://www.googletagmanager.com/ns.html?id=G-2QPMPZ3WQ3`}
-              height="0"
-              width="0"
-              style={{ display: 'none', visibility: 'hidden' }}
-            ></iframe>
-          </noscript>
         </body>
       </Html>
     );

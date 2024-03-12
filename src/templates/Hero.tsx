@@ -27,7 +27,7 @@ const Hero = () => (
         description="Compre rifas e concorra a skins incríveis."
         button={
           <Link href="">
-            <Button xl>Quero Saber Mais</Button>
+            <Button xl>Aguarde</Button>
           </Link>
         }
       />

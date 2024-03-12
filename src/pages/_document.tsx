@@ -1,3 +1,5 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { GoogleTagManager } from '@next/third-parties/google';
 import Document, { Head, Html, Main, NextScript } from 'next/document';
 
 import { AppConfig } from '../utils/AppConfig';
@@ -8,7 +10,9 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang={AppConfig.locale}>
-        <Head />
+        <Head>
+          <GoogleTagManager gtmId="G-2QPMPZ3WQ3" />
+        </Head>
         <body>
           <Main />
           <NextScript />

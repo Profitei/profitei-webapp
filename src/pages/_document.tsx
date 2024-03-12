@@ -16,6 +16,7 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          <GoogleTagManager gtmId="G-2QPMPZ3WQ3" />
         </body>
       </Html>
     );

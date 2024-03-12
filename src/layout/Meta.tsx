@@ -1,3 +1,4 @@
+import { GoogleTagManager } from '@next/third-parties/google';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
@@ -16,6 +17,7 @@ const Meta = (props: IMetaProps) => {
   return (
     <>
       <Head>
+        <GoogleTagManager gtmId="G-2QPMPZ3WQ3" />
         <meta charSet="UTF-8" key="charset" />
         <meta
           name="viewport"

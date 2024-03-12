@@ -9,8 +9,9 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang={AppConfig.locale}>
-        <GoogleTagManager gtmId="G-2QPMPZ3WQ3" />
-        <Head />
+        <Head>
+          <GoogleTagManager gtmId="G-2QPMPZ3WQ3" />
+        </Head>
         <body>
           <Main />
           <NextScript />

@@ -3,7 +3,7 @@ import type { ReactNode } from 'react';
 type IHeroOneButtonProps = {
   title: ReactNode;
   description: string;
-  button: ReactNode;
+  buttons: ReactNode; // Certifique-se de que o nome da prop seja 'buttons'
 };
 
 const HeroOneButton = (props: IHeroOneButtonProps) => (
@@ -13,7 +13,7 @@ const HeroOneButton = (props: IHeroOneButtonProps) => (
     </h1>
     <div className="mb-16 mt-4 text-2xl">{props.description}</div>
 
-    {props.button}
+    <div className="flex justify-center">{props.buttons}</div>
   </header>
 );
 

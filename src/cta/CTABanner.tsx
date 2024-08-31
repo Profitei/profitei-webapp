@@ -3,7 +3,7 @@ import type { ReactNode } from 'react';
 type ICTABannerProps = {
   title: string;
   subtitle: string;
-  button: ReactNode;
+  buttons: ReactNode; // Mudança de 'button' para 'buttons'
 };
 
 const CTABanner = (props: ICTABannerProps) => (
@@ -13,8 +13,8 @@ const CTABanner = (props: ICTABannerProps) => (
       <div className="text-primary-500">{props.subtitle}</div>
     </div>
 
-    <div className="whitespace-no-wrap mt-3 sm:ml-2 sm:mt-0">
-      {props.button}
+    <div className="mt-3 flex flex-col space-y-2 sm:ml-2 sm:mt-0 sm:items-start">
+      {props.buttons}
     </div>
   </div>
 );

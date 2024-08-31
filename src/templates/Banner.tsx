@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { useRouter } from 'next/router';
 
 import { CTABanner } from '../cta/CTABanner';
@@ -31,7 +30,7 @@ const Banner = () => {
                 background: 'none',
               }}
             >
-              <Image
+              <img
                 src="/assets/images/google-play-badge.png"
                 alt="Disponível no Google Play"
                 width={150}
@@ -49,7 +48,7 @@ const Banner = () => {
                 background: 'none',
               }}
             >
-              <Image
+              <img
                 src="/assets/images/apple.svg"
                 alt="Disponível na Apple Store em breve"
                 width={150}

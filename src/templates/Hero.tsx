@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { useRouter } from 'next/router';
 
 import { Background } from '../background/Background';
@@ -47,7 +46,7 @@ const Hero = () => {
                   background: 'none',
                 }}
               >
-                <Image
+                <img
                   src="/assets/images/google-play-badge.png"
                   alt="Disponível no Google Play"
                   width={150}
@@ -65,7 +64,7 @@ const Hero = () => {
                   background: 'none',
                 }}
               >
-                <Image
+                <img
                   src="/assets/images/apple.svg"
                   alt="Disponível na Apple Store em breve"
                   width={150}

@@ -6,7 +6,6 @@ const PrivacyPolicy: React.FC = () => {
       <h1 className="mb-4 text-4xl font-bold text-primary-600">
         Política de Privacidade - Profitei
       </h1>
-      <p className="mb-8 text-gray-600">Data de Vigência: [inserir data]</p>
 
       <section className="mb-6">
         <h2 className="mb-2 text-2xl font-semibold text-primary-500">

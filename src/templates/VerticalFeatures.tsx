@@ -17,6 +17,7 @@ const VerticalFeatures = () => (
       description="Acompanhe diariamente a live do Balloninho e saiba ao vivo quem são os vencedores dos Sorteios."
       image="/assets/images/balloni.png"
       imageAlt="Second feature alt text"
+      imageUrl="https://www.twitch.tv/brunoballoni"
       reverse
     />
     <VerticalFeatureRow

@@ -7,6 +7,7 @@ type IVerticalFeatureRowProps = {
   image: string;
   imageAlt: string;
   reverse?: boolean;
+  imageUrl?: string; // Adicionar uma prop opcional para a URL de clique
 };
 
 const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
@@ -22,6 +23,12 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
 
   const router = useRouter();
 
+  const handleImageClick = () => {
+    if (props.imageUrl) {
+      router.push(props.imageUrl); // Redirecionar para a URL se estiver definida
+    }
+  };
+
   return (
     <div className={verticalFeatureClass}>
       <div className="w-full text-center sm:w-1/2 sm:px-6">
@@ -30,7 +37,13 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
       </div>
 
       <div className="w-full p-6 sm:w-1/2">
-        <img src={`${router.basePath}${props.image}`} alt={props.imageAlt} />
+        {/* Aplicar onClick para a imagem se imageUrl for fornecida */}
+        <img
+          src={`${router.basePath}${props.image}`}
+          alt={props.imageAlt}
+          className={props.imageUrl ? 'cursor-pointer' : ''}
+          onClick={handleImageClick}
+        />
       </div>
     </div>
   );
